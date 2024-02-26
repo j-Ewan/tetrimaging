@@ -38,7 +38,7 @@ for fumen in fumens:
     img = Image.fromarray(data, 'RGBA')
 
     # Define the output filename and folder path
-    filename = fumen + '.png'
+    filename = fumen.replace('/','-').replace('?','_') + '.png'
     folder_path = './images/'
 
     # Create the folder if it doesn't exist
