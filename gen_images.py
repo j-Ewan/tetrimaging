@@ -45,7 +45,7 @@ for fumen in fumens:
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
-    final_image = img.resize((100,40), resample=Image.BOX)
+    final_image = img.resize((160,64), resample=Image.BOX)
 
     # Save the image to the specified folder
     final_image.save(os.path.join(folder_path, filename))
