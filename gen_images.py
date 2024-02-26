@@ -38,14 +38,16 @@ for fumen in fumens:
     img = Image.fromarray(data, 'RGBA')
 
     # Define the output filename and folder path
-    filename = fumen + '.gif'
+    filename = fumen + '.png'
     folder_path = './images/'
 
     # Create the folder if it doesn't exist
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
 
+    final_image = img.resize((100,40), resample=Image.BOX)
+
     # Save the image to the specified folder
-    img.save(os.path.join(folder_path, filename))
+    final_image.save(os.path.join(folder_path, filename))
 
     # print(f'Color image saved successfully to: {os.path.join(folder_path, filename)}')
